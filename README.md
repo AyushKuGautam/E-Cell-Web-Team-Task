@@ -1,7 +1,9 @@
 # E-Cell-Web-Team-Recruitment-Task
 This website is made in reference to the task provided by the Web Team of ECell MNNIT during it's recruitment process. 
 The website contains two pages i.e; the first and the seond page.
+
 Description of the First page :
+
 1. The first page contains a navigation bar with 3 options in it, ‘Home’, ‘Grid’ and
 ‘LinkedIn’.
 1. On clicking ‘Home’, the user is redirected to the Second page.
@@ -17,6 +19,8 @@ container contains shadow inside.
 2. When you click on the last square (bottom-right), all
 colours change to blue in sequence of their clicks (original
 clicks).
+
 Description of the Second page :
+
 1. The Second Page contains Developer's picture, name, registration number and a button that
 will redirect the users to his Instagram handle.
