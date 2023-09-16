@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>E-Cell WebTeam</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="navbar-collapse collapse"
+          id="navbarSupportedContent"
+          style=""
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="cursor: pointer;" onclick="scrollToTarget()" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class ="nav-link" href="./index.html">Grid</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/ayush-gautam-003a9a251/"
+                role="button"
+                data-bs-toggle=""
+                aria-expanded="false"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container px-4" id="custom-cards">
+      <div class="row row-cols-1 row-cols-lg-3 align-items g-4 py-4">
+        <div class="col one" style="height: 300px">
+          <div
+            class="card gradient-background card-cover h-100 overflow-hidden text-bg rounded-4 shadow-lg"
+          >
+            <div class="d-flex flex-column h-100 text-white text-shadow-1">
+              <h3 class=""></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col two" style="height: 300px">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg rounded-4 shadow-lg"
+          >
+            <div class="d-flex flex-column h-100 text-white text-shadow-1">
+              <h3 class="">
+                <img
+                  src="./logo1.aa59d10dce000c1b6a45.png"
+                  alt=""
+                  height="300px"
+                />
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col three" style="height: 300px">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-grey-200 rounded-4 shadow-lg"
+          >
+            <div class="d-flex flex-column h-100 text-white text-shadow-1">
+              <h3 class="">
+                <div class="container" onclick="changeColor(event)">
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square" ></div>
+                  <div class="blue square"  id="last-square"></div>
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="target-section">
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4 my-5"
+        src="./1689133512896.jpg"
+        alt=""
+        width="180"
+        height="180"
+      />
+      <h1 class="display-5 fw-bold text-body-emphasis">Ayush Gautam</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">20224040</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-primary" href="https://www.instagram.com/_ayushgautam2733/" role="button">Instagram</a>
+        </div>
+      </div>
+    </div>
+</div>
+    <a href="#" onclick="scrollToTarget()"></a>
+
+    </div>
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function changeColor(square) {
+        square.style.backgroundColor = "red";
+      }
+    </script>
+    <script>
+      <button
+        class="btn"
+        onclick="window.location.href = 'https://www.instagram.com/_ayushgautam2733/';"
+      ></button>;
+    </script>
+    <script>
+        function scrollToTarget() {
+            const targetSection = document.getElementById("target-section");
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <script>
+        let clickedSquares = [];
+        function changeColor(event) {
+            const target = event.target;
+
+            if (target.classList.contains('square') && target !== lastSquare) {
+                target.style.backgroundColor = 'red';
+                clickedSquares.push(target);
+            } else if (target === lastSquare) {
+                clickedSquares.forEach((square, index) => {
+                    setTimeout(() => {
+                        square.style.backgroundColor = 'blue';
+                    }, index * 500); 
+                });
+            }
+        }
+
+        const lastSquare = document.getElementById('last-square');
+    </script>
+  </body>
+</html>
